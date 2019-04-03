@@ -1,7 +1,79 @@
 # API-first development with OpenAPI
 # This file will be used at compile time to generate Spring-MVC endpoint stubs using openapi-generator
-openapi: "3.0.1"
+swagger: "2.0"
 info:
-  title: "SpringBootWithJhipsterApp"
-  version: 0.0.1
-paths: {}
+  description: "Spring Boot Jhipster App"
+  version: "0.0.1"
+  title: "Spring Boot Jhipster"
+  contact:
+    email: "gangadhara.g2011@gmail.com"
+host: "localhost:8080"
+basePath: "/"
+tags:
+- name: "Spring Boot Jhipster"
+  description: "Spring Boot Jhipster App Operations"
+- name: "Spring Boot Jhipster App"
+  description: "Spring Boot Jhipster App Operations"
+schemes:
+- "http"
+paths:
+  /person/create:
+    post:
+      tags:
+        - "Person"
+      summary: "Create the person in DB"
+      description: "Create the unique person in DB"
+      operationId: "create"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+#      parameters:
+#      - in: "body"
+#        name: "binding"
+#        description: "Bind data"
+#        required: true
+#        schema:
+#          $ref: "#/BindRequest"
+      responses:
+        200:
+          description: "Person Created"
+#          schema:
+#           ObjectResponse:
+#              type: 'object'
+#              oneOf:
+#                - $ref: "#/BindResponse"
+#  /contact/create:
+#    post:
+#      tags:
+#        - "Contacts"
+#      summary: "Creates a new contact"
+#      description: "Creates a new contact"
+#      operationId: "create"
+#      consumes:
+#      - "application/json"
+#      produces:
+#      - "application/json"
+# #     parameters:
+# #    - in: "body"
+# #       name: "body"
+# #       description: "Contact Parameters"
+# #       required: true
+# #       schema:
+# #         $ref: "#/Request"
+#      responses:
+#        200:
+#          description: "successful operation"
+#          schema:
+#           ObjectResponse:
+#              type: 'object'
+#              oneOf:
+#                - $ref: "#/Response"
+#                - $ref: "#/PersonPrivacyOnlyResponse"
+#                - $ref: "#/PersonIdOnlyResponse"
+#
+##definitions:
+##  Request:
+##    $ref: './definitions/index.yml#/Request'
+##  Response:
+##    $ref: './definitions/index.yml#/Response'
