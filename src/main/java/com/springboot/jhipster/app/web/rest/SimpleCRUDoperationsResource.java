@@ -23,6 +23,7 @@ public class SimpleCRUDoperationsResource {
 	public String getPerson() {
 		//throw new SimpleISException("Throw RuntimeException");
 		//return new ResponseEntity<>("Person Data Rettrived",HttpStatus.OK);
+		//
 		return "Person Data Rettrived";
 	}
 
